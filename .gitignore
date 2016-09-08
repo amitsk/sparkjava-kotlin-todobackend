@@ -3,6 +3,7 @@ build
 classes
 *.iml
 *.ipr
+.gradle
 # Compiled class file
 *.class
 
