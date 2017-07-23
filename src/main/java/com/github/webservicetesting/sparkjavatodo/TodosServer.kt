@@ -2,6 +2,7 @@ package com.github.webservicetesting.sparkjavatodo
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import org.eclipse.jetty.http.MimeTypes
 import org.slf4j.LoggerFactory
 import spark.Request
@@ -15,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicLong
 
 object TodosServer {
-    private val mapper = ObjectMapper()
+    private val mapper = ObjectMapper().registerKotlinModule()
     private val logger = LoggerFactory.getLogger(TodosServer::class.java)
 
     private val PATH = "/todos"
