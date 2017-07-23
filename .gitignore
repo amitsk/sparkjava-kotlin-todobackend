@@ -1,9 +1,12 @@
-.idea
-build
-classes
+.idea/
+build/
+classes/
 *.iml
 *.ipr
 .gradle
+out/
+
+
 # Compiled class file
 *.class
 
